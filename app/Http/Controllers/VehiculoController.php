@@ -7,6 +7,7 @@ use App\Models\Persona;
 use App\Models\Colore;
 use App\Models\Tipovehiculo;
 use App\Models\Marca;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 /**
@@ -26,6 +27,20 @@ class VehiculoController extends Controller
 
         return view('vehiculo.index', compact('vehiculos'))
             ->with('i', (request()->input('page', 1) - 1) * $vehiculos->perPage());
+    }
+
+    public function pdf()
+    {
+        $vehiculos = Vehiculo::paginate();
+        $tipovehiculo = Tipovehiculo::pluck('Tipovehiculo','id');
+        $marca = Marca::pluck('Marca','id');
+        $color = Colore::pluck('Color','id');
+        $persona = Persona::pluck('Primernombre','id');
+
+        $pdf = Pdf::loadView('vehiculo.pdf', ['vehiculos'=>$vehiculos]);
+        return $pdf->stream();
+
+        //return view('vehiculo.pdf', compact('vehiculos','tipovehiculo','marca','color','persona'));
     }
 
     /**
