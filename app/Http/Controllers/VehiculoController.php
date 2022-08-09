@@ -54,9 +54,11 @@ class VehiculoController extends Controller
         $tipovehiculo = Tipovehiculo::pluck('Tipovehiculo','id');
         $marca = Marca::pluck('Marca','id');
         $color = Colore::pluck('Color','id');
-        $persona = Persona::pluck('Primernombre','id');
+        // $persona = Persona::pluck('Primernombre', 'id');
+        $personaC = Persona::where('idTipopersona', 1)->pluck('Primernombre', 'id');
+        $personaP = Persona::where('idTipopersona', 2)->pluck('Primernombre', 'id');
 
-        return view('vehiculo.create', compact('vehiculo','tipovehiculo','marca','color','persona'));
+        return view('vehiculo.create', compact('vehiculo','tipovehiculo','marca','color','personaC','personaP'));
     }
 
     /**
@@ -100,9 +102,11 @@ class VehiculoController extends Controller
         $tipovehiculo = Tipovehiculo::pluck('Tipovehiculo','id');
         $marca = Marca::pluck('Marca','id');
         $color = Colore::pluck('Color','id');
-        $persona = Persona::pluck('Primernombre','id');
+        // $persona = Persona::pluck('Primernombre', 'id');
+        $personaC = Persona::where('idTipopersona', 1)->pluck('Primernombre', 'id');
+        $personaP = Persona::where('idTipopersona', 2)->pluck('Primernombre', 'id');
 
-        return view('vehiculo.edit', compact('vehiculo','tipovehiculo','marca','color','persona'));
+        return view('vehiculo.edit', compact('vehiculo','tipovehiculo','marca','color','personaC','personaP'));
     }
 
     /**

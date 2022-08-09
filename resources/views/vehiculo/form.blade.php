@@ -23,12 +23,12 @@
         </div>
         <div class="form-group">
             {{ Form::label('Conductor') }}
-            {{ Form::select('idConductor', $persona, $vehiculo->idConductor, ['class' => 'form-control' . ($errors->has('idConductor') ? ' is-invalid' : ''), 'placeholder' => 'Conductor']) }}
+            {{ Form::select('idConductor', $personaC, $vehiculo->idConductor, ['class' => 'form-control' . ($errors->has('idConductor') ? ' is-invalid' : ''), 'placeholder' => 'Conductor']) }}
             {!! $errors->first('idConductor', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('Propietario') }}
-            {{ Form::select('idPropietario',$persona, $vehiculo->idPropietario, ['class' => 'form-control' . ($errors->has('idPropietario') ? ' is-invalid' : ''), 'placeholder' => 'Propietario']) }}
+            {{ Form::select('idPropietario',$personaP, $vehiculo->idPropietario, ['class' => 'form-control' . ($errors->has('idPropietario') ? ' is-invalid' : ''), 'placeholder' => 'Propietario']) }}
             {!! $errors->first('idPropietario', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
