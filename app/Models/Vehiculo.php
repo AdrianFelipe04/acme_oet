@@ -30,17 +30,11 @@ class Vehiculo extends Model
     
     static $rules = [
 		'Placa' => 'required',
-		'Placa' => 'max:20',
 		'idColor' => 'required',
-		'idColor' => 'max:20',
 		'idMarca' => 'required',
-		'idMarca' => 'max:20',
 		'idTipovehiculo' => 'required',
-		'idTipovehiculo' => 'max:20',
 		'idConductor' => 'required',
-		'idConductor' => 'max:20',
 		'idPropietario' => 'required',
-		'idPropietario' => 'max:20',
     ];
 
     protected $perPage = 20;

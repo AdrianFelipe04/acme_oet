@@ -21,7 +21,6 @@ class Tipovehiculo extends Model
     
     static $rules = [
 		'Tipovehiculo' => 'required',
-		'Tipovehiculo' => 'max:20',
     ];
 
     protected $perPage = 20;

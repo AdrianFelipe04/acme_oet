@@ -165,6 +165,7 @@ return [
         'Segundonombre' => 'segundo nombre',
         'Primernombre' => 'primer nombre',
         'idTipopersona' => 'tipo persona',
+        'idTipovehiculo' => 'tipo vehiculo',
         'idColor' => 'color',
         'idMarca' => 'marca',
         'idConductor' => 'conductor',

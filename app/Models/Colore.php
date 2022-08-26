@@ -21,7 +21,6 @@ class Colore extends Model
     
     static $rules = [
 		'Color' => 'required',
-		'Color' => 'max:20',
     ];
 
     protected $perPage = 20;
