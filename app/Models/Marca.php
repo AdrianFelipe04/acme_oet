@@ -21,6 +21,12 @@ class Marca extends Model
     
     static $rules = [
 		'Marca' => 'required',
+		'Marca' => 'max:20',
+    // nullable
+    ];
+
+    static $message = [
+      'Marca.required' => 'El campo Marca no puede estar vacio'
     ];
 
     protected $perPage = 20;

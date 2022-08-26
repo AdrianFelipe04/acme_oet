@@ -31,12 +31,21 @@ class Persona extends Model
     static $rules = [
 		'idTipopersona' => 'required',
 		'Cedula' => 'required',
+		'Cedula' => 'max:20',
+		// 'Cedula' => 'unique:App\Models\Persona,Cedula',
 		'Primernombre' => 'required',
-		'Segundonombre' => 'required',
+		'Cedula' => 'max:20',
+		'Segundonombre' => 'nullable',
+		'Segundonombre' => 'max:20',
+		// 'Segundonombre' => 'min:2',
 		'Apellidos' => 'required',
+		'Apellidos' => 'max:20',
 		'Direccion' => 'required',
+		'Direccion' => 'max:20',
 		'Telefono' => 'required',
+		'Telefono' => 'max:20',
 		'Ciudad' => 'required',
+		'Ciudad' => 'max:20',
     ];
 
     protected $perPage = 20;

@@ -21,6 +21,7 @@ class Tipopersona extends Model
     
     static $rules = [
 		'Tipopersona' => 'required',
+		'Tipopersona' => 'max:20',
     ];
 
     protected $perPage = 20;

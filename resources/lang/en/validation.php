@@ -85,7 +85,7 @@ return [
     'max' => [
         'numeric' => 'The :attribute must not be greater than :max.',
         'file' => 'The :attribute must not be greater than :max kilobytes.',
-        'string' => 'The :attribute must not be greater than :max characters.',
+        'string' => 'El maximo de caracteres es de :max, en el campo :attribute.',
         'array' => 'The :attribute must not have more than :max items.',
     ],
     'mimes' => 'The :attribute must be a file of type: :values.',
@@ -93,7 +93,7 @@ return [
     'min' => [
         'numeric' => 'The :attribute must be at least :min.',
         'file' => 'The :attribute must be at least :min kilobytes.',
-        'string' => 'The :attribute must be at least :min characters.',
+        'string' => 'El minimo de caracteres es de :min, en el campo :attribute.',
         'array' => 'The :attribute must have at least :min items.',
     ],
     'multiple_of' => 'The :attribute must be a multiple of :value.',
@@ -107,7 +107,7 @@ return [
     'prohibited_unless' => 'The :attribute field is prohibited unless :other is in :values.',
     'prohibits' => 'The :attribute field prohibits :other from being present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => 'No puedes dejar vacío el campo :attribute.',
     'required_array_keys' => 'The :attribute field must contain entries for: :values.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
@@ -145,6 +145,9 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'Marca' => [
+            'required' => 'No puedes dejar vacío el campo :attribute.',
+        ],
     ],
 
     /*
@@ -158,6 +161,14 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'Segundonombre' => 'segundo nombre',
+        'Primernombre' => 'primer nombre',
+        'idTipopersona' => 'tipo persona',
+        'idColor' => 'color',
+        'idMarca' => 'marca',
+        'idConductor' => 'conductor',
+        'idPropietario' => 'propietario',
+    ],
 
 ];
