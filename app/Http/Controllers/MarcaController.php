@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Marca;
 use Illuminate\Http\Request;
+use Response;
+use Illuminate\Support\Facades\Validator;
 
 /**
  * Class MarcaController
@@ -46,6 +48,8 @@ class MarcaController extends Controller
         request()->validate(Marca::$rules);
 
         $marca = Marca::create($request->all());
+
+        // return response()->json($marca);
 
         return redirect()->route('marcas.index')
             ->with('success', 'Marca creada correctamente.');

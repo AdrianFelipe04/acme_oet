@@ -16,13 +16,14 @@
                         <span class="card-title">Actualizar Persona</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('personas.update', $persona->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('personas.update', $persona->id) }}" id="form"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
                             @include('persona.form')
 
                         </form>
+                        <script src="{{asset('js/persona.js')}}"></script>
                     </div>
                 </div>
             </div>

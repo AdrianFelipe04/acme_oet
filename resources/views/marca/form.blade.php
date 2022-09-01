@@ -2,9 +2,11 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('Marca') }}
-            {{ Form::text('Marca', $marca->Marca, ['class' => 'form-control' . ($errors->has('Marca') ? ' is-invalid' : ''), 'placeholder' => 'Marca']) }}
-            {!! $errors->first('Marca', '<div class="invalid-feedback">:message</div>') !!}
+            <label for="Marca" class="form-label">{{ Form::label('Marca') }}</label>
+            <input type="text" class="form-control" value="{{ isset($marca->Marca)?$marca->Marca:old('Marca') }}" id="Marca" name="Marca" placeholder="Marca">
+            <span class="badge text-danger error-marca">
+        
+            </span>
         </div>
 
     </div>

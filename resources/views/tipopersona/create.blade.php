@@ -16,12 +16,13 @@
                         <span class="card-title">Crear Tipo de Persona</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('tipopersonas.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('tipopersonas.store') }}" id="form"  role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('tipopersona.form')
 
                         </form>
+                        <script src="{{asset('js/tipopersona.js')}}"></script>
                     </div>
                 </div>
             </div>

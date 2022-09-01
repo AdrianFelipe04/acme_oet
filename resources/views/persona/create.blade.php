@@ -16,12 +16,13 @@
                         <span class="card-title">Crear Persona</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('personas.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('personas.store') }}" id="form"  role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('persona.form')
 
                         </form>
+                        <script src="{{asset('js/persona.js')}}"></script>
                     </div>
                 </div>
             </div>

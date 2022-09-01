@@ -16,12 +16,13 @@
                         <span class="card-title">Crear Color</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('colores.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('colores.store') }}" id="form"  role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('colore.form')
 
                         </form>
+                        <script src="{{asset('js/colore.js')}}"></script>
                     </div>
                 </div>
             </div>

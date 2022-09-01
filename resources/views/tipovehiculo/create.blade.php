@@ -16,12 +16,13 @@
                         <span class="card-title">Crear Tipo de Vehiculo</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('tipovehiculos.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('tipovehiculos.store') }}" id="form" role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('tipovehiculo.form')
 
                         </form>
+                        <script src="{{asset('js/tipovehiculo.js')}}"></script>
                     </div>
                 </div>
             </div>

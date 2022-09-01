@@ -2,9 +2,11 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('Tipo de Persona') }}
-            {{ Form::text('Tipopersona', $tipopersona->Tipopersona, ['class' => 'form-control' . ($errors->has('Tipopersona') ? ' is-invalid' : ''), 'placeholder' => 'Tipo de Persona']) }}
-            {!! $errors->first('Tipopersona', '<div class="invalid-feedback">:message</div>') !!}
+            <label for="Tipopersona" class="form-label">{{ Form::label('Tipo de Persona') }}</label>
+            <input type="text" class="form-control" value="{{ isset($tipopersona->Tipopersona)?$tipopersona->Tipopersona:old('Tipopersona') }}" id="Tipopersona" name="Tipopersona" placeholder="Tipo de persona">
+            <span class="badge text-danger error-tipopersona">
+        
+            </span>
         </div>
 
     </div>
@@ -13,3 +15,4 @@
         <button type="submit" class="btn btn-primary">Aceptar</button>
     </div>
 </div>
+<script src="{{asset('js/tipopersona.js')}}"></script>

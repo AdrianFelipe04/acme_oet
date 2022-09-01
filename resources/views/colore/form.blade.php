@@ -1,10 +1,12 @@
 <div class="box box-info padding-1">
     <div class="box-body">
-        
+
         <div class="form-group">
-            {{ Form::label('Color') }}
-            {{ Form::text('Color', $colore->Color, ['class' => 'form-control' . ($errors->has('Color') ? ' is-invalid' : ''), 'placeholder' => 'Color']) }}
-            {!! $errors->first('Color', '<div class="invalid-feedback">:message</div>') !!}
+            <label for="Color" class="form-label">{{ Form::label('Color') }}</label>
+            <input type="text" class="form-control" value="{{ isset($colore->Color)?$colore->Color:old('Color') }}" id="Color" name="Color" placeholder="Color">
+            <span class="badge text-danger error-color">
+        
+            </span>
         </div>
 
     </div>
