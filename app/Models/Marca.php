@@ -20,7 +20,7 @@ class Marca extends Model
 {
     
     static $rules = [
-		'Marca' => 'required',
+		'Marca' => 'required|max:20',
     // nullable
     ];
 

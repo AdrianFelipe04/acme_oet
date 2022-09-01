@@ -16,12 +16,13 @@
                         <span class="card-title">Crear Marca</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('marcas.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('marcas.store') }}" id="form" role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('marca.form')
 
                         </form>
+                        <script src="{{asset('js/marca.js')}}"></script>
                     </div>
                 </div>
             </div>

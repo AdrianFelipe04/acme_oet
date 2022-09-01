@@ -16,13 +16,14 @@
                         <span class="card-title">Actualizar Tipo de Vehiculo</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('tipovehiculos.update', $tipovehiculo->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('tipovehiculos.update', $tipovehiculo->id) }}" id="form" role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
                             @include('tipovehiculo.form')
 
                         </form>
+                        <script src="{{asset('js/tipovehiculo.js')}}"></script>
                     </div>
                 </div>
             </div>

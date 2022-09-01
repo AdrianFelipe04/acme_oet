@@ -23,6 +23,7 @@
                             @include('marca.form')
 
                         </form>
+                        <script src="{{asset('js/marca.js')}}"></script>
                     </div>
                 </div>
             </div>

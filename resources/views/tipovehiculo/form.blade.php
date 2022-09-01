@@ -1,11 +1,17 @@
 <div class="box box-info padding-1">
     <div class="box-body">
         
+    <div class="box-body">
+
         <div class="form-group">
-            {{ Form::label('Tipo de vehiculo') }}
-            {{ Form::text('Tipovehiculo', $tipovehiculo->Tipovehiculo, ['class' => 'form-control' . ($errors->has('Tipovehiculo') ? ' is-invalid' : ''), 'placeholder' => 'Tipo de vehiculo']) }}
-            {!! $errors->first('Tipovehiculo', '<div class="invalid-feedback">:message</div>') !!}
+            <label for="Tipovehiculo" class="form-label">{{ Form::label('Tipo de Vehiculo') }}</label>
+            <input type="text" class="form-control" value="{{ isset($tipovehiculo->Tipovehiculo)?$tipovehiculo->Tipovehiculo:old('Tipovehiculo') }}" id="Tipovehiculo" name="Tipovehiculo" placeholder="Tipo de vehiculo">
+            <span class="badge text-danger error-tipovehiculo">
+        
+            </span>
         </div>
+
+</div>
 
     </div>
     <div class="box-footer mt20">
